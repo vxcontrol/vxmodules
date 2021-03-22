@@ -1,0 +1,75 @@
+{
+    "type": "object",
+    "properties": {
+        "pam_unsuccessful_auth": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.atomic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "log_auth_with_nonexistent_user": {
+                            "type": "boolean",
+                            "default": false
+                        }
+                    },
+                    "required": [
+                        "log_auth_with_nonexistent_user"
+                    ]
+                }
+            ]
+        },
+        "pam_successful_auth": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.atomic"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "pam_multiple_unsuccessful_auth": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.aggregation"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "pam_confirmed_bruteforce": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.correlation"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "pam_confirmed_distributed_bruteforce": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.correlation"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "pam_unsuccessful_auth",
+        "pam_successful_auth",
+        "pam_multiple_unsuccessful_auth",
+        "pam_confirmed_bruteforce",
+        "pam_confirmed_distributed_bruteforce"
+    ]
+}

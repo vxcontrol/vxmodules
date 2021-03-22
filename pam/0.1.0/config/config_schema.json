@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "path_to_auth_log": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 255
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "path_to_auth_log"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "my_event_id": {
+            "allOf": [{
+                    "$ref": "#/definitions/events.atomic"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "my_event_id"
+    ]
+}

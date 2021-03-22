@@ -1,0 +1,54 @@
+{
+    "module": {
+        "ru": {
+            "title": "мой тестовый модуль",
+            "description": "модуль для примера"
+        },
+        "en": {
+            "title": "my test module",
+            "description": "module for example"
+        }
+    },
+    "config": {
+    },
+    "events": {
+        "my_test_event": {
+            "ru": {
+                "title": "моё тестовое событие",
+                "description": "проверка шаблонизатора {{ key }}"
+            },
+            "en": {
+                "title": "my test event",
+                "description": "check templater {{ key }}"
+            }
+        }
+    },
+    "event_config": {
+        "my_test_event": {
+        }
+    },
+    "event_data": {
+        "key": {
+            "ru": {
+                "title": "Тестовый параметр",
+                "description": "содержит какое-то тестовое значение"
+            },
+            "en": {
+                "title": "Test parameter",
+                "description": "contains some kind of test value"
+            }
+        }
+    },
+    "tags": {
+        "my_test_tag": {
+            "ru": {
+                "title": "мой тестовый тег",
+                "description": "проверка работоспособности функциональности по отображению тегов"
+            },
+            "en": {
+                "title": "my test tag",
+                "description": "testing display of tags function"
+            }
+        }
+    }
+}

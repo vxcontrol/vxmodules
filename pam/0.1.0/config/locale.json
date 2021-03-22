@@ -1,0 +1,156 @@
+{
+    "module": {
+        "ru": {
+            "title": "PAM модуль",
+            "description": "модуль мониторинга PAM аутентификации"
+        },
+        "en": {
+            "title": "PAM module",
+            "description": "monitoring PAM authentication module"
+        }
+    },
+    "config": {
+        "path_to_auth_log": {
+            "ru": {
+                "title": "Путь до auth.log",
+                "description": "этот параметр задаёт путь до лог-файла с аутентификациями через модуль PAM"
+            },
+            "en": {
+                "title": "Path to auth.log",
+                "description": "this option configures path to log file that contains authentication info though PAM module"
+            }
+        }
+    },
+    "events": {
+        "pam_unsuccessful_auth": {
+            "ru": {
+                "title": "неуспешная аутентификация через PAM",
+                "description": "неуспешная {{ type }} аутентификация с {{ ip }} под {{#if valid_user}}существующим{{else}}несуществующим{{/if}} пользователем {{ login }}"
+            },
+            "en": {
+                "title": "unsuccessful PAM authentication",
+                "description": "unsuccessful {{ type }} authentication from {{ ip }} as {{#if valid_user}}existing{{else}}unknown{{/if}} user {{ login }}"
+            }
+        },
+        "pam_successful_auth": {
+            "ru": {
+                "title": "успешная аутентификация через PAM",
+                "description": "успешная {{ type }} аутентификация с {{ ip }} под пользователем {{ login }}"
+            },
+            "en": {
+                "title": "successful PAM authentication",
+                "description": "successful {{ type }} authentication from {{ ip }} as user {{ login }}"
+            }
+        },
+        "pam_multiple_unsuccessful_auth": {
+            "ru": {
+                "title": "множественная неуспешная аутентификация через PAM",
+                "description": "{{ counts }} попыток неуспешной {{ type }} аутентификации с {{ ip }} под пользователем {{ login }}"
+            },
+            "en": {
+                "title": "multiple unsuccessful PAM authentication",
+                "description": "{{ counts }} attempts unsuccessful {{ type }} authentication from {{ ip }} as user {{ login }}"
+            }
+        },
+        "pam_confirmed_bruteforce": {
+            "ru": {
+                "title": "успешная попытка подбора пароля через PAM",
+                "description": "подтверждённая успешная попытка подбора пароля через {{ type }} под пользователем {{ login }} с {{ ip }}"
+            },
+            "en": {
+                "title": "successful bruteforce guessing password through PAM",
+                "description": "confirmed successful bruteforce guessing password through {{ type }} as user {{ login }} from {{ ip }}"
+            }
+        },
+        "pam_confirmed_distributed_bruteforce": {
+            "ru": {
+                "title": "успешная распределённая попытка подбора пароля через PAM",
+                "description": "подтверждённая успешная попытка распределённого подбора пароля через {{ type }} под пользователем {{ login }}"
+            },
+            "en": {
+                "title": "successful distributed bruteforce guessing password through PAM",
+                "description": "confirmed successful distributed bruteforce guessing password through {{ type }} as user {{ login }}"
+            }
+        }
+    },
+    "event_config": {
+        "pam_unsuccessful_auth": {
+            "log_auth_with_nonexistent_user": {
+                "ru": {
+                    "title": "Несуществующие пользователи",
+                    "description": "эта опция включает или выключает логирование событий с несуществующими пользователями"
+                },
+                "en": {
+                    "title": "Non-existing users",
+                    "description": "this option enables or disables logging of events with non-existing users"
+                }
+            }
+        },
+        "pam_successful_auth": {
+        }
+    },
+    "event_data": {
+        "ip": {
+            "ru": {
+                "title": "IP-адрес",
+                "description": "содержит IP-адрес в формате IPv4 или IPv6"
+            },
+            "en": {
+                "title": "IP address",
+                "description": "contains IPv4 or IPv6 address format"
+            }
+        },
+        "type": {
+            "ru": {
+                "title": "Тип аутентификации",
+                "description": "содержит строковый тип авториазции от auth модуля, например, ssh, local, passwd, и т.д."
+            },
+            "en": {
+                "title": "Authentication type",
+                "description": "contains string of authentication type from auth module, for example, ssh, local, passwd, etc."
+            }
+        },
+        "login": {
+            "ru": {
+                "title": "Учётная запись",
+                "description": "содержит имя пользователя под которым осуществляется аутентификация"
+            },
+            "en": {
+                "title": "Login",
+                "description": "contains the user name under which authentication was happened"
+            }
+        },
+        "valid_user": {
+            "ru": {
+                "title": "Наличие учётной записи",
+                "description": "содержит информацию существует ли такой пользователь в системе"
+            },
+            "en": {
+                "title": "User exists",
+                "description": "contains info whether such user exists in the system"
+            }
+        },
+        "status": {
+            "ru": {
+                "title": "Результат прохождения аутентификации",
+                "description": "содержит результат проверки аутентификации пользователя"
+            },
+            "en": {
+                "title": "Authentication result",
+                "description": "contains authentication result by login"
+            }
+        }
+    },
+    "tags": {
+        "auth_mon": {
+            "ru": {
+                "title": "мониторинг аутентификации",
+                "description": "модули обеспечивающие мониторинг аутентификаций"
+            },
+            "en": {
+                "title": "authentication monitoring",
+                "description": "authentication monitoring modules"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pam_unsuccessful_auth": {
+        "type": "atomic",
+        "log_auth_with_nonexistent_user": false,
+        "actions": [ ]
+    },
+    "pam_successful_auth": {
+        "type": "atomic",
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    },
+    "pam_multiple_unsuccessful_auth": {
+        "type": "aggregation",
+        "seq": [
+            { "name": "pam_unsuccessful_auth", "min_count": 5 }
+        ],
+        "group_by": [ "type", "login", "ip" ],
+        "max_count": 0,
+        "max_time": 3600,
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    },
+    "pam_confirmed_bruteforce": {
+        "type": "correlation",
+        "seq": [
+            { "name": "pam_unsuccessful_auth", "min_count": 10 },
+            { "name": "pam_successful_auth", "min_count": 1 }
+        ],
+        "group_by": [ "type", "login", "ip" ],
+        "max_count": 0,
+        "max_time": 10800,
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    },
+    "pam_confirmed_distributed_bruteforce": {
+        "type": "correlation",
+        "seq": [
+            { "name": "pam_multiple_unsuccessful_auth", "min_count": 4 },
+            { "name": "pam_confirmed_bruteforce", "min_count": 1 }
+        ],
+        "group_by": [ "type", "login" ],
+        "max_count": 0,
+        "max_time": 3600,
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    }
+}

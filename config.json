@@ -1,0 +1,67 @@
+[
+    {
+        "agent_id": "",
+        "name": "test",
+        "template": "custom",
+        "version": "0.1.0",
+        "os": {
+            "linux": ["386", "amd64"],
+            "windows": ["386", "amd64"],
+            "darwin": ["386", "amd64"]
+        },
+        "tags": ["my_test_tag"],
+        "events": [
+            "my_test_event"
+        ],
+        "last_update": "2019-01-22 14:53:17"
+    },
+    {
+        "agent_id": "",
+        "name": "pam",
+        "template": "custom",
+        "version": "0.1.0",
+        "os": {
+            "linux": ["386", "amd64"]
+        },
+        "tags": ["auth_mon"],
+        "events": [
+            "pam_unsuccessful_auth",
+            "pam_successful_auth",
+            "pam_multiple_unsuccessful_auth",
+            "pam_confirmed_bruteforce",
+            "pam_confirmed_distributed_bruteforce"
+        ],
+        "last_update": "2019-01-22 14:53:17"
+    },
+    {
+        "agent_id": "",
+        "name": "lua-interpreter",
+        "template": "custom",
+        "version": "0.1.0",
+        "os": {
+            "linux": ["386", "amd64"],
+            "windows": ["386", "amd64"],
+            "darwin": ["386", "amd64"]
+        },
+        "tags": ["lua_exec", "lua"],
+        "events": [
+        ],
+        "last_update": "2019-01-22 14:53:17"
+    },
+    {
+        "agent_id": "",
+        "name": "generic",
+        "template": "generic",
+        "version": "0.1.0",
+        "os": {
+            "linux": ["386", "amd64"],
+            "windows": ["386", "amd64"],
+            "darwin": ["386", "amd64"]
+        },
+        "tags": ["my_tag_id"],
+        "events": [
+            "my_event_id"
+        ],
+        "last_update": "2019-01-22 14:53:17"
+    }
+]

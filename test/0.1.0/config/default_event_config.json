@@ -1,0 +1,6 @@
+{
+    "my_test_event": {
+        "type": "atomic",
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "0.1.0": {
+        "ru": {
+            "date": "13.03.2019",
+            "title": "Базовая функциональность",
+            "description": "Добавлено <...>\nИменено <...>\nИсправлено <...>\nУдалено <...>"
+        },
+        "en": {
+            "date": "03-13-2019",
+            "title": "Base functionality",
+            "description": "Added <...>\nChanged <...>\nFixed <...>\nRemoved <...>"
+        }
+    }
+}

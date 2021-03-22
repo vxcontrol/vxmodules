@@ -1,0 +1,22 @@
+{
+    "os": {
+        "linux": [
+            "386",
+            "amd64"
+        ]
+    },
+    "system": true,
+    "name": "pam",
+    "template": "custom",
+    "tags": [
+        "auth_mon"
+    ],
+    "events": [
+        "pam_unsuccessful_auth",
+        "pam_successful_auth",
+        "pam_multiple_unsuccessful_auth",
+        "pam_confirmed_bruteforce",
+        "pam_confirmed_distributed_bruteforce"
+    ],
+    "version": "0.1.0"
+}

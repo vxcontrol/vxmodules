@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "ip": {
+            "type": "string",
+            "default": "0.0.0.0",
+            "anyOf" : [
+                { "format": "ipv4" },
+                { "format": "ipv6" }
+            ]
+        },
+        "type": {
+            "type": "string",
+            "default": "ssh",
+            "enum": [ "ssh" ]
+        },
+        "login": {
+            "type": "string",
+            "default": "unknown",
+            "minLength": 1
+        },
+        "valid_user": {
+            "type": "boolean",
+            "default": false
+        },
+        "status": {
+            "type": "string",
+            "default": "failed",
+            "enum": [ "success", "failed" ]
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "ip",
+        "type",
+        "login",
+        "valid_user",
+        "status"
+    ]
+}

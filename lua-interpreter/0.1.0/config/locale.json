@@ -1,0 +1,38 @@
+{
+    "module": {
+        "ru": {
+            "title": "Lua интерпретатор",
+            "description": "Модуль для выполнения кода на Lua"
+        },
+        "en": {
+            "title": "Lua interpreter",
+            "description": "This module executes lua code"
+        }
+    },
+    "config": {},
+    "events": {},
+    "event_config": {},
+    "event_data": {},
+    "tags": {
+        "lua_exec": {
+            "ru": {
+                "title": "Lua интерпретатор",
+                "description": "интерпретатор Lua кода в режиме реального времени"
+            },
+            "en": {
+                "title": "Lua interpreter",
+                "description": "Lua code realtime interpreter"
+            }
+        },
+        "lua": {
+            "ru": {
+                "title": "Lua",
+                "description": "только Lua код"
+            },
+            "en": {
+                "title": "Lua",
+                "description": "Lua code only"
+            }
+        }
+    }
+}

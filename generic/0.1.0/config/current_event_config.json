@@ -1,0 +1,6 @@
+{
+    "my_event_id": {
+        "type": "atomic",
+        "actions": [ { "name": "log_to_db", "type": "db" } ]
+    }
+}

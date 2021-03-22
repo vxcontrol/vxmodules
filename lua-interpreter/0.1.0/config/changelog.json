@@ -1,0 +1,14 @@
+{
+    "0.1.0": {
+        "en": {
+            "date": "06-06-2019",
+            "title": "Base functionality",
+            "description": "Module was created"
+        },
+        "ru": {
+            "date": "06.06.2019",
+            "title": "Базовая функциональность",
+            "description": "Модуль создан"
+        }
+    }
+}
